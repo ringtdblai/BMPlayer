@@ -499,7 +499,7 @@ open class BMPlayerControlView: UIView {
         
         // Top views
         topMaskView.addSubview(backButton)
-        backButton.isHidden = true
+//        backButton.isHidden = true
         topMaskView.addSubview(titleLabel)
         addSubview(chooseDefitionView)
         
