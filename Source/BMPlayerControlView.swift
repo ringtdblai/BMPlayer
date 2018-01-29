@@ -232,7 +232,7 @@ open class BMPlayerControlView: UIView {
         let alpha: CGFloat = isShow ? 1.0 : 0.0
         self.isMaskShowing = isShow
         
-        UIApplication.shared.setStatusBarHidden(!isShow, with: .fade)
+        //        UIApplication.shared.setStatusBarHidden(!isShow, with: .fade)
         
         UIView.animate(withDuration: 0.3, animations: {
             self.topMaskView.alpha    = alpha
@@ -496,9 +496,10 @@ open class BMPlayerControlView: UIView {
         mainMaskView.insertSubview(maskImageView, at: 0)
         mainMaskView.clipsToBounds = true
         mainMaskView.backgroundColor = UIColor ( red: 0.0, green: 0.0, blue: 0.0, alpha: 0.4 )
-       
+        
         // Top views
         topMaskView.addSubview(backButton)
+        backButton.isHidden = true
         topMaskView.addSubview(titleLabel)
         addSubview(chooseDefitionView)
         
